@@ -1,0 +1,128 @@
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 12px;
+  background: white;
+  color: #222;
+}
+
+.closeButton {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #eee;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.closeButton:hover {
+  background: #ddd;
+}
+
+/* Image gallery */
+.imageGallery {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.imageGallery img {
+  flex: 0 0 80%;
+  width: 80%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.noImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: #eee;
+  color: #666;
+}
+
+/* Event information */
+.eventInformation h2 {
+  margin: 0 0 15px;
+}
+
+.eventInformation p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.description {
+  line-height: 1.6;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.saveButton,
+.bookButton {
+  flex: 1;
+  min-width: 130px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.saveButton {
+  background: #e8eef7;
+  color: #174b87;
+}
+
+.bookButton {
+  background: #1769d2;
+  color: white;
+}
+
+.saveButton:disabled,
+.bookButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 16px;
+  }
+
+  .imageGallery img {
+    height: 200px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
