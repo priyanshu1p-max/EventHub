@@ -1,0 +1,283 @@
+
+.profilePage {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 25px;
+  color: #172033;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.heading h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.heading p {
+  color: #718096;
+  margin: 0;
+}
+
+.profileCard,
+.section {
+  background: #fff;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.avatar {
+  width: 105px;
+  height: 105px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileIdentity h2 {
+  margin: 0 0 7px;
+}
+
+.profileIdentity p {
+  margin: 0 0 10px;
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.role {
+  display: inline-block;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.photoUpload {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid #e5eaf2;
+}
+
+.photoUpload label {
+  font-weight: 600;
+}
+
+.photoUpload input {
+  max-width: 100%;
+}
+
+.accountInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #e5eaf2;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.section h2 {
+  margin: 0 0 22px;
+  font-size: 19px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d7deea;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-size: 14px;
+  color: #172033;
+  background: #fff;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.field input:disabled,
+.field select:disabled,
+.field textarea:disabled {
+  background: #f8fafc;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.primaryButton,
+.secondaryButton,
+.cancelButton {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 19px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primaryButton {
+  background: #2563eb;
+  color: white;
+}
+
+.primaryButton:hover {
+  background: #1d4ed8;
+}
+
+.secondaryButton {
+  background: #0f766e;
+  color: white;
+}
+
+.secondaryButton:hover {
+  background: #115e59;
+}
+
+.cancelButton {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.cancelButton:hover {
+  background: #cbd5e1;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin: 20px 0 35px;
+}
+
+.success,
+.error {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status {
+  padding: 35px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .profilePage {
+    padding: 15px;
+  }
+
+  .heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profileCard,
+  .section {
+    padding: 18px;
+  }
+
+  .profileHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accountInfo {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
